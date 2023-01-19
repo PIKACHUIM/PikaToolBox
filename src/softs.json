@@ -1,0 +1,51 @@
+{
+  "type": [
+    {
+      "path": "Booloader-DiskFlash-Tools",
+      "name": "引导镜像",
+      "softs": [
+        {
+          "name": "BalenaEther-1.5.057",
+          "description": "my toys",
+          "installed": true
+        }
+      ]
+    },
+    {
+      "path": "Code-Development-Softwares",
+      "name": "软件开发"
+    },
+    {
+      "path": "Efficiency-Office-Softwares",
+      "name": "效率办公"
+    },
+    {
+      "path": "File-Encryption-Recovery",
+      "name": "加密恢复"
+    },
+    {
+      "path": "Flash-UART-Programer",
+      "name": "硬件编程"
+    },
+    {
+      "path": "Hardware-Information",
+      "name": "设备信息"
+    },
+    {
+      "path": "Network-Softwares",
+      "name": "网络工具"
+    },
+    {
+      "path": "System-Install-Backup",
+      "name": "系统安装"
+    },
+    {
+      "path": "System-Management-Clean",
+      "name": "系统优化"
+    },
+    {
+      "path": "USB-HardDisk-Utilities",
+      "name": "硬盘工具"
+    }
+  ]
+}
