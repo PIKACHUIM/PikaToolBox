@@ -4,22 +4,22 @@ import IconButton from "@mui/material/IconButton";
 import Fade from "@mui/material/Fade";
 
 import RecommendIcon from "@mui/icons-material/Recommend";
-import StartIcon from "../../assets/LeftIcon/yindaojinxinag.svg?component";
-import SoftwareDev from "../../assets/LeftIcon/ruanjiankaifabao.svg?component";
-import SpeedOffice from "../../assets/LeftIcon/xiaoshuaitisheng.svg?component";
-import Cprogramming from "../../assets/LeftIcon/jiamijiemifuwu.svg?component";
-import Hardware from "../../assets/LeftIcon/cpuchuliqiyingjian.svg?component";
-import DeviceInfo from "../../assets/LeftIcon/shebeixinxi.svg?component";
-import NetworkTools from "../../assets/LeftIcon/wangluogongju-.svg?component";
-import SystemInstall from "../../assets/LeftIcon/xitonganzhuang.svg?component";
-import SystemOptimize from "../../assets/LeftIcon/xitongyouhua.svg?component";
-import DiskTools from "../../assets/LeftIcon/yingpan.svg?component";
+import { ReactComponent as StartIcon } from "../../assets/LeftIcon/yindaojinxinag.svg";
+import { ReactComponent as SoftwareDev } from "../../assets/LeftIcon/ruanjiankaifabao.svg";
+import { ReactComponent as SpeedOffice } from "../../assets/LeftIcon/xiaoshuaitisheng.svg";
+import { ReactComponent as CProgramming } from "../../assets/LeftIcon/jiamijiemifuwu.svg";
+import { ReactComponent as Hardware } from "../../assets/LeftIcon/cpuchuliqiyingjian.svg";
+import { ReactComponent as DeviceInfo } from "../../assets/LeftIcon/shebeixinxi.svg";
+import { ReactComponent as NetworkTools } from "../../assets/LeftIcon/wangluogongju-.svg";
+import { ReactComponent as SystemInstall } from "../../assets/LeftIcon/xitonganzhuang.svg";
+import { ReactComponent as SystemOptimize } from "../../assets/LeftIcon/xitongyouhua.svg";
+import { ReactComponent as DiskTools } from "../../assets/LeftIcon/yingpan.svg";
 
 const icons = [
   StartIcon,
   SoftwareDev,
   SpeedOffice,
-  Cprogramming,
+  CProgramming,
   Hardware,
   DeviceInfo,
   NetworkTools,
@@ -53,7 +53,8 @@ function LeftItem(props: { isExtend: boolean; title: string; index: number }) {
           TransitionComponent={Fade}
           placement="right"
           TransitionProps={{ timeout: 600 }}
-          title={props.title}>
+          title={props.title}
+        >
           <IconButton>
             <ItemIcon index={props.index} viewBox="0 0 1024 1024" />
           </IconButton>
