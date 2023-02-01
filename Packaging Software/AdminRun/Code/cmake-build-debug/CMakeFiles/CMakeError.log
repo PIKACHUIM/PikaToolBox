@@ -1,0 +1,28 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/MyProject/OpenProjects/ToolsBox/Packaging Software/AdminRun/Code/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_b307e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_b307e.dir\build.make /nologo -L                  CMakeFiles\cmTC_b307e.dir\build
+Building C object CMakeFiles/cmTC_b307e.dir/CMakeCCompilerABI.c.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_b307e.dir\CMakeCCompilerABI.c.obj.d --working-dir="D:\MyProject\OpenProjects\ToolsBox\Packaging Software\AdminRun\Code\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @C:\Users\PIKACH~1\AppData\Local\Temp\nmC115.tmp
+NMAKE : fatal error U1077: “"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"”: 返回代码“0xc0000409”
+Stop.
+NMAKE : fatal error U1077: “"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: D:/MyProject/OpenProjects/ToolsBox/Packaging Software/AdminRun/Code/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_56b62\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_56b62.dir\build.make /nologo -L                  CMakeFiles\cmTC_56b62.dir\build
+Building CXX object CMakeFiles/cmTC_56b62.dir/CMakeCXXCompilerABI.cpp.obj
+	"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_56b62.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir="D:\MyProject\OpenProjects\ToolsBox\Packaging Software\AdminRun\Code\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @C:\Users\PIKACH~1\AppData\Local\Temp\nmD7F9.tmp
+NMAKE : fatal error U1077: “"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"”: 返回代码“0xc0000409”
+Stop.
+NMAKE : fatal error U1077: “"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+

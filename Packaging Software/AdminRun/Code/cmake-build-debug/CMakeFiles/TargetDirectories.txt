@@ -1,0 +1,3 @@
+D:/MyProject/OpenProjects/ToolsBox/Packaging Software/AdminRun/Code/cmake-build-debug/CMakeFiles/Code.dir
+D:/MyProject/OpenProjects/ToolsBox/Packaging Software/AdminRun/Code/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/MyProject/OpenProjects/ToolsBox/Packaging Software/AdminRun/Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir

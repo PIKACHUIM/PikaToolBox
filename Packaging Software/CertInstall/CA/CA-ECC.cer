@@ -1,0 +1,183 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            4f:be:d8:87:5e:13:8e:ce:58:53:48:7a
+        Signature Algorithm: ecdsa-with-SHA512
+        Issuer: C=CN, O=Pikachu Trust Network CA, OU=Pikachu Certification Authority, CN=Pikachu Root CA ECC/name=\xE7\x9A\xAE\xE5\x8D\xA1\xE4\xB8\x98CA\xE7\xB3\xBB\xE7\xBB\x9F\xE8\xAF\x81\xE4\xB9\xA6ECC/name=Pikachu Root CA ECC/description=\xE7\x9A\xAE\xE5\x8D\xA1\xE4\xB8\x98\xE6\x95\xB0\xE5\xAD\x97\xE8\xAF\x81\xE4\xB9\xA6\xE4\xBF\xA1\xE4\xBB\xBB\xE7\xB3\xBB\xE7\xBB\x9F\xE6\xA0\xB9\xE8\xAF\x81\xE4\xB9\xA6
+        Validity
+            Not Before: Jan  1 00:00:00 2000 GMT
+            Not After : Dec 31 23:59:59 2999 GMT
+        Subject: C=CN, O=Pikachu Trust Network CA, OU=Pikachu Certification Authority, CN=Pikachu Root CA ECC/name=\xE7\x9A\xAE\xE5\x8D\xA1\xE4\xB8\x98CA\xE7\xB3\xBB\xE7\xBB\x9F\xE8\xAF\x81\xE4\xB9\xA6ECC/name=Pikachu Root CA ECC/description=\xE7\x9A\xAE\xE5\x8D\xA1\xE4\xB8\x98\xE6\x95\xB0\xE5\xAD\x97\xE8\xAF\x81\xE4\xB9\xA6\xE4\xBF\xA1\xE4\xBB\xBB\xE7\xB3\xBB\xE7\xBB\x9F\xE6\xA0\xB9\xE8\xAF\x81\xE4\xB9\xA6
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (512 bit)
+                pub:
+                    04:03:2d:cc:f2:cc:35:f2:0e:3e:e1:f4:2a:65:e4:
+                    e9:c4:d0:f7:16:80:ac:79:8c:a0:ca:35:4f:ec:5b:
+                    5c:d6:91:a1:c6:49:4a:4f:20:02:c3:7d:0d:0d:98:
+                    c9:e8:80:4f:50:36:fa:3c:ee:78:57:61:04:7a:88:
+                    ad:d0:bc:37:45:12:d9:26:b8:3d:7e:b1:5f:20:a5:
+                    43:78:32:f3:11:35:c1:2a:64:3e:78:e8:26:00:1f:
+                    bc:38:22:f7:25:83:38:60:9f:6b:91:38:21:8f:58:
+                    14:00:1a:62:25:a9:ab:48:8b:54:2f:7f:ab:70:91:
+                    a7:45:72:76:4a:7a:a3:18:27
+                ASN1 OID: brainpoolP512t1
+        X509v3 extensions:
+            X509v3 Subject Alternative Name: 
+                DNS:Pikachu Root CA ECC
+            X509v3 Issuer Alternative Name: 
+                DNS:Pikachu Root CA ECC
+            X509v3 Subject Key Identifier: 
+                E1:01:55:78:6C:88:8B:42:26:CE:1D:20:7E:AA:F7:DB:B5:20:58:29
+            X509v3 Authority Key Identifier: 
+                keyid:E1:01:55:78:6C:88:8B:42:26:CE:1D:20:7E:AA:F7:DB:B5:20:58:29
+                DirName:/C=CN/O=Pikachu Trust Network CA/OU=Pikachu Certification Authority/CN=Pikachu Root CA ECC/name=\xE7\x9A\xAE\xE5\x8D\xA1\xE4\xB8\x98CA\xE7\xB3\xBB\xE7\xBB\x9F\xE8\xAF\x81\xE4\xB9\xA6ECC/name=Pikachu Root CA ECC
+                serial:4F:BE:D8:87:5E:13:8E:CE:58:53:48:7A
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            Netscape Comment: 
+                Pikachu Root CA ECC
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            Netscape CA Revocation Url: 
+                https://cert.pika.net.cn/CA-ECC.crl
+            Netscape Base Url: 
+                https://cert.pika.net.cn
+            Netscape Revocation Url: 
+                https://cert.pika.net.cn/CA-ECC.crl
+            Netscape Renewal Url: 
+                https://cert.pika.net.cn/CA-ECC.cer
+            Netscape CA Policy Url: 
+                https://cert.pika.net.cn
+            Netscape SSL Server Name: 
+                cert.pika.net.cn
+            X509v3 Extended Key Usage: critical
+                X509v3 Any Policy, Any Extended Key Usage, 2.16.156.112554.3, 2.23.140.1.3, Netscape Server Gated Crypto, TLS Web Server Authentication, TLS Web Client Authentication, Code Signing, E-mail Protection, IPSec End System, IPSec Tunnel, IPSec User, Time Stamping, OCSP Signing, ipsec Internet Key Exchange, 1.3.6.1.5.5.8.2.2, 1.3.6.1.4.1.311, Microsoft Individual Code Signing, Microsoft Commercial Code Signing, Microsoft Trust List Signing, 1.3.6.1.4.1.311.10.3.2, Microsoft Server Gated Crypto, Microsoft Encrypted File System, 1.3.6.1.4.1.311.10.3.4.1, 1.3.6.1.4.1.311.10.3.5, 1.3.6.1.4.1.311.10.3.7, 1.3.6.1.4.1.311.10.3.6, 1.3.6.1.4.1.311.10.3.8, 1.3.6.1.4.1.311.10.3.9, 1.3.6.1.4.1.311.10.3.10, 1.3.6.1.4.1.311.10.3.11, 1.3.6.1.4.1.311.10.3.12, 1.3.6.1.4.1.311.10.3.13, 1.3.6.1.4.1.311.10.5.1, 1.3.6.1.4.1.311.10.6.1, 1.3.6.1.4.1.311.10.6.2, 1.3.6.1.4.1.311.20.2, 1.3.6.1.4.1.311.20.2.1, Microsoft Smartcard Login, Microsoft User Principal Name, 1.3.6.1.4.1.311.21.1, 1.3.6.1.4.1.311.21.2, 1.3.6.1.4.1.311.21.3, 1.3.6.1.4.1.311.21.4, 1.3.6.1.4.1.311.21.5, 1.3.6.1.4.1.311.21.6, 1.3.6.1.4.1.311.21.19, 1.3.6.1.4.1.311.67.1.1, 1.3.6.1.4.1.311.21.10
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:https://cert.pika.net.cn/CA-ECC.crl
+
+                Full Name:
+                  URI:https://cert.52pika.cn/CA-ECC.crl
+
+                Full Name:
+                  URI:https://cert.52pika.com/CA-ECC.crl
+
+                Full Name:
+                  URI:https://cert.99pika.cn/CA-ECC.crl
+
+                Full Name:
+                  URI:https://cert.99pika.com/CA-ECC.crl
+
+                Full Name:
+                  URI:https://pikachuim.github.io/CA/CA-ECC.crl
+
+                Full Name:
+                  URI:https://pikachuim.gitee.io/ca/CA-ECC.crl
+
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.3
+                Policy: 2.16.156.112554.3
+                Policy: X509v3 Any Policy
+                Policy: Any Extended Key Usage
+
+            Authority Information Access: 
+                OCSP - URI:https://cert.pika.net.cn/CA-ECC
+                OCSP - URI:https://cert.52pika.cn/CA-ECC
+                OCSP - URI:https://cert.52pika.com/CA-ECC
+                OCSP - URI:https://cert.99pika.cn/CA-ECC
+                OCSP - URI:https://cert.99pika.com/CA-ECC
+                OCSP - URI:https://pikachuim.github.io/CA/CA-ECC
+                OCSP - URI:https://pikachuim.gitee.io/ca/CA-ECC
+                CA Issuers - URI:https://cert.pika.net.cn/CA-ECC.cer
+                CA Issuers - URI:https://cert.52pika.cn/CA-ECC.cer
+                CA Issuers - URI:https://cert.52pika.com/CA-ECC.cer
+                CA Issuers - URI:https://cert.99pika.cn/CA-ECC.cer
+                CA Issuers - URI:https://cert.99pika.com/CA-ECC.cer
+                CA Issuers - URI:https://pikachuim.github.io/CA/CA-ECC.cer
+                CA Issuers - URI:https://pikachuim.gitee.io/ca/CA-ECC.cer
+
+    Signature Algorithm: ecdsa-with-SHA512
+         30:81:84:02:40:34:3a:e2:e6:0c:35:5f:14:c0:fe:34:37:65:
+         25:0c:c9:c3:85:de:5f:19:36:23:88:9b:8c:d7:c7:3d:93:87:
+         40:69:9e:5e:7b:10:bf:1e:2a:48:a1:68:cb:ae:48:a0:70:c5:
+         7e:bc:9b:76:ca:44:93:26:b4:5d:ec:e8:c9:94:51:02:40:07:
+         6f:c3:70:6e:a6:cf:df:15:86:e2:f6:7c:41:53:cc:8c:e4:d1:
+         20:20:91:2f:e2:c0:d4:31:ac:6c:22:00:71:1e:d7:ec:e6:b2:
+         a0:65:8e:94:89:e9:2b:4c:46:17:31:ec:67:48:31:ab:d3:e7:
+         ee:27:ea:25:66:44:a3:46:82
+-----BEGIN CERTIFICATE-----
+MIIMpzCCDAygAwIBAgIMT77Yh14Tjs5YU0h6MAoGCCqGSM49BAMEMIHwMQswCQYD
+VQQGEwJDTjEhMB8GA1UECgwYUGlrYWNodSBUcnVzdCBOZXR3b3JrIENBMSgwJgYD
+VQQLDB9QaWthY2h1IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MRwwGgYDVQQDDBNQ
+aWthY2h1IFJvb3QgQ0EgRUNDMSMwIQYDVQQpDBrnmq7ljaHkuJhDQeezu+e7n+iv
+geS5pkVDQzEcMBoGA1UEKQwTUGlrYWNodSBSb290IENBIEVDQzEzMDEGA1UEDQwq
+55qu5Y2h5LiY5pWw5a2X6K+B5Lmm5L+h5Lu757O757uf5qC56K+B5LmmMCAXDTAw
+MDEwMTAwMDAwMFoYDzI5OTkxMjMxMjM1OTU5WjCB8DELMAkGA1UEBhMCQ04xITAf
+BgNVBAoMGFBpa2FjaHUgVHJ1c3QgTmV0d29yayBDQTEoMCYGA1UECwwfUGlrYWNo
+dSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTEcMBoGA1UEAwwTUGlrYWNodSBSb290
+IENBIEVDQzEjMCEGA1UEKQwa55qu5Y2h5LiYQ0Hns7vnu5/or4HkuaZFQ0MxHDAa
+BgNVBCkME1Bpa2FjaHUgUm9vdCBDQSBFQ0MxMzAxBgNVBA0MKuearuWNoeS4mOaV
+sOWtl+ivgeS5puS/oeS7u+ezu+e7n+agueivgeS5pjCBmzAUBgcqhkjOPQIBBgkr
+JAMDAggBAQ4DgYIABAMtzPLMNfIOPuH0KmXk6cTQ9xaArHmMoMo1T+xbXNaRocZJ
+Sk8gAsN9DQ2YyeiAT1A2+jzueFdhBHqIrdC8N0US2Sa4PX6xXyClQ3gy8xE1wSpk
+PnjoJgAfvDgi9yWDOGCfa5E4IY9YFAAaYiWpq0iLVC9/q3CRp0Vydkp6oxgno4IJ
+QzCCCT8wHgYDVR0RBBcwFYITUGlrYWNodSBSb290IENBIEVDQzAeBgNVHRIEFzAV
+ghNQaWthY2h1IFJvb3QgQ0EgRUNDMB0GA1UdDgQWBBThAVV4bIiLQibOHSB+qvfb
+tSBYKTCCASoGA1UdIwSCASEwggEdgBThAVV4bIiLQibOHSB+qvfbtSBYKaGB9qSB
+8zCB8DELMAkGA1UEBhMCQ04xITAfBgNVBAoMGFBpa2FjaHUgVHJ1c3QgTmV0d29y
+ayBDQTEoMCYGA1UECwwfUGlrYWNodSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTEc
+MBoGA1UEAwwTUGlrYWNodSBSb290IENBIEVDQzEjMCEGA1UEKQwa55qu5Y2h5LiY
+Q0Hns7vnu5/or4HkuaZFQ0MxHDAaBgNVBCkME1Bpa2FjaHUgUm9vdCBDQSBFQ0Mx
+MzAxBgNVBA0MKuearuWNoeS4mOaVsOWtl+ivgeS5puS/oeS7u+ezu+e7n+agueiv
+geS5poIMT77Yh14Tjs5YU0h6MA8GA1UdEwEB/wQFMAMBAf8wCwYDVR0PBAQDAgEG
+MCIGCWCGSAGG+EIBDQQVFhNQaWthY2h1IFJvb3QgQ0EgRUNDMBEGCWCGSAGG+EIB
+AQQEAwIABzAyBglghkgBhvhCAQQEJRYjaHR0cHM6Ly9jZXJ0LnBpa2EubmV0LmNu
+L0NBLUVDQy5jcmwwJwYJYIZIAYb4QgECBBoWGGh0dHBzOi8vY2VydC5waWthLm5l
+dC5jbjAyBglghkgBhvhCAQMEJRYjaHR0cHM6Ly9jZXJ0LnBpa2EubmV0LmNuL0NB
+LUVDQy5jcmwwMgYJYIZIAYb4QgEHBCUWI2h0dHBzOi8vY2VydC5waWthLm5ldC5j
+bi9DQS1FQ0MuY2VyMCcGCWCGSAGG+EIBCAQaFhhodHRwczovL2NlcnQucGlrYS5u
+ZXQuY24wHwYJYIZIAYb4QgEMBBIWEGNlcnQucGlrYS5uZXQuY24wggImBgNVHSUB
+Af8EggIaMIICFgYEVR0gAAYEVR0lAAYHYIEchu8qAwYFZ4EMAQMGCWCGSAGG+EIE
+AQYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUF
+BwMFBggrBgEFBQcDBgYIKwYBBQUHAwcGCCsGAQUFBwMIBggrBgEFBQcDCQYIKwYB
+BQUHAxEGCCsGAQUFCAICBgcrBgEEAYI3BgorBgEEAYI3AgEVBgorBgEEAYI3AgEW
+BgorBgEEAYI3CgMBBgorBgEEAYI3CgMCBgorBgEEAYI3CgMDBgorBgEEAYI3CgME
+BgsrBgEEAYI3CgMEAQYKKwYBBAGCNwoDBQYKKwYBBAGCNwoDBwYKKwYBBAGCNwoD
+BgYKKwYBBAGCNwoDCAYKKwYBBAGCNwoDCQYKKwYBBAGCNwoDCgYKKwYBBAGCNwoD
+CwYKKwYBBAGCNwoDDAYKKwYBBAGCNwoDDQYKKwYBBAGCNwoFAQYKKwYBBAGCNwoG
+AQYKKwYBBAGCNwoGAgYJKwYBBAGCNxQCBgorBgEEAYI3FAIBBgorBgEEAYI3FAIC
+BgorBgEEAYI3FAIDBgkrBgEEAYI3FQEGCSsGAQQBgjcVAgYJKwYBBAGCNxUDBgkr
+BgEEAYI3FQQGCSsGAQQBgjcVBQYJKwYBBAGCNxUGBgkrBgEEAYI3FRMGCisGAQQB
+gjdDAQEGCSsGAQQBgjcVCjCCAT8GA1UdHwSCATYwggEyMCmgJ6AlhiNodHRwczov
+L2NlcnQucGlrYS5uZXQuY24vQ0EtRUNDLmNybDAnoCWgI4YhaHR0cHM6Ly9jZXJ0
+LjUycGlrYS5jbi9DQS1FQ0MuY3JsMCigJqAkhiJodHRwczovL2NlcnQuNTJwaWth
+LmNvbS9DQS1FQ0MuY3JsMCegJaAjhiFodHRwczovL2NlcnQuOTlwaWthLmNuL0NB
+LUVDQy5jcmwwKKAmoCSGImh0dHBzOi8vY2VydC45OXBpa2EuY29tL0NBLUVDQy5j
+cmwwL6AtoCuGKWh0dHBzOi8vcGlrYWNodWltLmdpdGh1Yi5pby9DQS9DQS1FQ0Mu
+Y3JsMC6gLKAqhihodHRwczovL3Bpa2FjaHVpbS5naXRlZS5pby9jYS9DQS1FQ0Mu
+Y3JsMC0GA1UdIAQmMCQwBwYFZ4EMAQMwCQYHYIEchu8qAzAGBgRVHSAAMAYGBFUd
+JQAwggKuBggrBgEFBQcBAQSCAqAwggKcMCsGCCsGAQUFBzABhh9odHRwczovL2Nl
+cnQucGlrYS5uZXQuY24vQ0EtRUNDMCkGCCsGAQUFBzABhh1odHRwczovL2NlcnQu
+NTJwaWthLmNuL0NBLUVDQzAqBggrBgEFBQcwAYYeaHR0cHM6Ly9jZXJ0LjUycGlr
+YS5jb20vQ0EtRUNDMCkGCCsGAQUFBzABhh1odHRwczovL2NlcnQuOTlwaWthLmNu
+L0NBLUVDQzAqBggrBgEFBQcwAYYeaHR0cHM6Ly9jZXJ0Ljk5cGlrYS5jb20vQ0Et
+RUNDMDEGCCsGAQUFBzABhiVodHRwczovL3Bpa2FjaHVpbS5naXRodWIuaW8vQ0Ev
+Q0EtRUNDMDAGCCsGAQUFBzABhiRodHRwczovL3Bpa2FjaHVpbS5naXRlZS5pby9j
+YS9DQS1FQ0MwLwYIKwYBBQUHMAKGI2h0dHBzOi8vY2VydC5waWthLm5ldC5jbi9D
+QS1FQ0MuY2VyMC0GCCsGAQUFBzAChiFodHRwczovL2NlcnQuNTJwaWthLmNuL0NB
+LUVDQy5jZXIwLgYIKwYBBQUHMAKGImh0dHBzOi8vY2VydC41MnBpa2EuY29tL0NB
+LUVDQy5jZXIwLQYIKwYBBQUHMAKGIWh0dHBzOi8vY2VydC45OXBpa2EuY24vQ0Et
+RUNDLmNlcjAuBggrBgEFBQcwAoYiaHR0cHM6Ly9jZXJ0Ljk5cGlrYS5jb20vQ0Et
+RUNDLmNlcjA1BggrBgEFBQcwAoYpaHR0cHM6Ly9waWthY2h1aW0uZ2l0aHViLmlv
+L0NBL0NBLUVDQy5jZXIwNAYIKwYBBQUHMAKGKGh0dHBzOi8vcGlrYWNodWltLmdp
+dGVlLmlvL2NhL0NBLUVDQy5jZXIwCgYIKoZIzj0EAwQDgYgAMIGEAkA0OuLmDDVf
+FMD+NDdlJQzJw4XeXxk2I4ibjNfHPZOHQGmeXnsQvx4qSKFoy65IoHDFfrybdspE
+kya0XezoyZRRAkAHb8NwbqbP3xWG4vZ8QVPMjOTRICCRL+LA1DGsbCIAcR7X7Oay
+oGWOlInpK0xGFzHsZ0gxq9Pn7ifqJWZEo0aC
+-----END CERTIFICATE-----
