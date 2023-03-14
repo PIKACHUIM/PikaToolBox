@@ -1,4 +1,4 @@
-import { fs, path, http } from "@tauri-apps/api";
+import { fs, path, http, invoke } from "@tauri-apps/api";
 
 export interface Soft {
   typeIndex: number;
@@ -25,17 +25,25 @@ async function getSoftsByType(typeIndex: number): Promise<Soft[]> {
   } catch (e) {
     console.log("无法获取目标类型的软件列表", e);
   }
-  return type_detail.list.map((file: any) => {
-    return {
-      typeIndex: typeIndex,
-      name: file.NameDisplay,
-      description: file.Description,
-      downloadUrl: file.DownloadURL,
-      exePath: `${dirName}/installed/${file.NameDisplay}-${file.SoftVersion}.exe`,
-      iconPath: `${dirName}/icons/${file.NameToFiles}-${file.SoftVersion}.ico`,
-      installed: false,
-    };
-  });
+  let apps: Soft[] = type_detail.list.map((file: any) => ({
+    typeIndex: typeIndex,
+    name: file.NameDisplay,
+    description: file.Description,
+    downloadUrl: file.DownloadURL,
+    exePath: `${dirName}/installed/${file.NameDisplay}-${file.SoftVersion}.exe`,
+    iconPath: `${dirName}/icons/${file.NameToFiles}-${file.SoftVersion}.ico`,
+    installed: false,
+  }));
+  await Promise.all(
+    apps.map(async (app) => {
+      const response_icon = await http.fetch<Uint8Array>(app.iconPath, {
+        method: "GET",
+        responseType: http.ResponseType.Binary,
+      });
+      await fs.writeBinaryFile(app.iconPath, response_icon.data);
+    })
+  );
+  return apps;
 }
 
 export async function fetchConfig() {
@@ -45,29 +53,21 @@ export async function fetchConfig() {
     // TODO: 根据OS获取不同的配置文件
     let data = await fs.readTextFile(configPath);
     await fs.writeTextFile(configPath, data);
-    
   } catch (err) {
     throw new Error("Failed to get config");
   }
   return;
 }
 
-async function getApp(app: Soft) {
+export async function getApp(app: Soft) {
   const response_exe = await http.fetch<Uint8Array>(app.downloadUrl, {
-    method: 'GET',
-    responseType: http.ResponseType.Binary,
-  });
-  const response_icon = await http.fetch<Uint8Array>(app.iconPath, {
-    method: 'GET',
+    method: "GET",
     responseType: http.ResponseType.Binary,
   });
 
   await fs.writeBinaryFile(app.exePath, response_exe.data);
-  await fs.writeBinaryFile(app.iconPath, response_icon.data);
-
 }
 
 export default {
   getSoftsByType,
-  getConfig: fetchConfig
 };

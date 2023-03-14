@@ -4,7 +4,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Soft } from "../../utils/getSoft";
+import { getApp, Soft } from "../../utils/getSoft";
+import { invoke } from "@tauri-apps/api";
 
 function SoftItem(props: { soft: Soft }) {
   const soft = props.soft;
@@ -27,11 +28,13 @@ function SoftItem(props: { soft: Soft }) {
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-evenly" }}>
-        <Button size="small">启动</Button>
+        <Button size="small" onClick={()=> {
+          invoke("execute_file", { file_path: props.soft.exePath, args: [] });
+        }}>启动</Button>
         {soft.installed ? (
           <Button size="small">卸载</Button>
         ) : (
-          <Button size="small" hidden={props.soft.installed}>
+          <Button size="small" onClick={()=> {getApp(props.soft)}}>
             下载
           </Button>
         )}

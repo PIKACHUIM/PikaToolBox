@@ -5,7 +5,7 @@
       "CN1": "https://file-cn.pika.net.cn/YD1/ToolBox/",
       "CN2": ""
     },
-    "config_sync": {
+    "config_url": {
       "url-win": [
         "https://gitee.com/pikachuim/SoftsSource/raw/master/Tools-Win.json",
         "https://raw.githubusercontent.com/PIKACHUIM/SoftsSource/master/Tools-Win.json",
