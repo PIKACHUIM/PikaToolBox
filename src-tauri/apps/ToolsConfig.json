@@ -1,0 +1,103 @@
+{
+  "global": {
+    "resource_ver": "0.0",
+    "download_url": {
+      "CN1": "https://file-cn.pika.net.cn/YD1/ToolBox/",
+      "CN2": ""
+    },
+    "config_sync": {
+      "url-win": [
+        "https://gitee.com/pikachuim/SoftsSource/raw/master/Tools-Win.json",
+        "https://raw.githubusercontent.com/PIKACHUIM/SoftsSource/master/Tools-Win.json",
+        "https://soft.pika.net.cn/Tools-Win.json",
+        "https://soft.52pika.cn/Tools-Win.json",
+        "https://soft.52pika.com/Tools-Win.json",
+        "https://soft.99pika.cn/Tools-Win.json",
+        "https://soft.99pika.com/Tools-Win.json",
+        "https://cdn-tx1.pika.net.cn/Tools-Win.json",
+        "https://cdn-tx1.52pika.cn/Tools-Win.json",
+        "https://cdn-tx1.52pika.com/Tools-Win.json",
+        "https://cdn-tx1.99pika.cn/Tools-Win.json",
+        "https://cdn-tx1.99pika.com/Tools-Win.json"
+      ],
+      "url-mac": [
+        "https://gitee.com/pikachuim/SoftsSource/raw/master/Tools-Mac.json",
+        "https://raw.githubusercontent.com/PIKACHUIM/SoftsSource/master/Tools-Mac.json",
+        "https://soft.pika.net.cn/Tools-Mac.json",
+        "https://soft.52pika.cn/Tools-Mac.json",
+        "https://soft.52pika.com/Tools-Mac.json",
+        "https://soft.99pika.cn/Tools-Mac.json",
+        "https://soft.99pika.com/Tools-Mac.json",
+        "https://cdn-tx1.pika.net.cn/Tools-Mac.json",
+        "https://cdn-tx1.52pika.cn/Tools-Mac.json",
+        "https://cdn-tx1.52pika.com/Tools-Mac.json",
+        "https://cdn-tx1.99pika.cn/Tools-Mac.json",
+        "https://cdn-tx1.99pika.com/Tools-Mac.json"
+      ],
+      "url-img": [
+        "https://gitee.com/pikachuim/SoftsSource/raw/master/Tools-Img.json",
+        "https://raw.githubusercontent.com/PIKACHUIM/SoftsSource/master/Tools-Img.json",
+        "https://soft.pika.net.cn/Tools-Img.json",
+        "https://soft.52pika.cn/Tools-Img.json",
+        "https://soft.52pika.com/Tools-Img.json",
+        "https://soft.99pika.cn/Tools-Img.json",
+        "https://soft.99pika.com/Tools-Img.json",
+        "https://cdn-tx1.pika.net.cn/Tools-Img.json",
+        "https://cdn-tx1.52pika.cn/Tools-Img.json",
+        "https://cdn-tx1.52pika.com/Tools-Img.json",
+        "https://cdn-tx1.99pika.cn/Tools-Img.json",
+        "https://cdn-tx1.99pika.com/Tools-Img.json"
+      ]
+    }
+  },
+  "type": [
+    {
+      "path": "Booloader-DiskFlash-Tools",
+      "name": "引导镜像",
+      "list": [
+        {
+          "NameDisplay": "BalenaEther",
+          "SoftVersion": "",
+          "Description": "U盘启动制作工具",
+          "DownloadURL": "BalenaEther-1.58"
+        }
+      ]
+    },
+    {
+      "path": "Code-Development-Softwares",
+      "name": "软件开发"
+    },
+    {
+      "path": "Efficiency-Office-Softwares",
+      "name": "效率办公"
+    },
+    {
+      "path": "File-Encryption-Recovery",
+      "name": "加密恢复"
+    },
+    {
+      "path": "Flash-UART-Programer",
+      "name": "硬件编程"
+    },
+    {
+      "path": "Hardware-Information",
+      "name": "设备信息"
+    },
+    {
+      "path": "Network-Softwares",
+      "name": "网络工具"
+    },
+    {
+      "path": "System-Install-Backup",
+      "name": "系统安装"
+    },
+    {
+      "path": "System-Management-Clean",
+      "name": "系统优化"
+    },
+    {
+      "path": "USB-HardDisk-Utilities",
+      "name": "硬盘工具"
+    }
+  ]
+}

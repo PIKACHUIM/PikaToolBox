@@ -28,9 +28,13 @@ function SoftItem(props: { soft: Soft }) {
       </CardContent>
       <CardActions sx={{ justifyContent: "space-evenly" }}>
         <Button size="small">启动</Button>
-        <Button size="small" hidden={props.soft.installed}>
-          下载
-        </Button>
+        {soft.installed ? (
+          <Button size="small">卸载</Button>
+        ) : (
+          <Button size="small" hidden={props.soft.installed}>
+            下载
+          </Button>
+        )}
       </CardActions>
     </Card>
   );
