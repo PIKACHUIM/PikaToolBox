@@ -51,6 +51,8 @@ async function getSoftsByType(typeIndex: number): Promise<Soft[]> {
         `${apps[i].name}-${apps[i].version}.ico`
       );
     }
+    //TODO: 检查是否已经安装
+    
     await Promise.all(
       apps.map(async (app) => {
         for (let each_path of [app.exePath, app.iconPath]) {
@@ -89,18 +91,20 @@ export async function fetchConfig() {
   }
   return;
 }
-
+// TODO: 下载软件
 export async function getApp(app: Soft) {
+  console.log("开始下载", app.name);
+  
   const response_exe = await Promise.race(
     app.downloadUrl.map((url) =>
       http.fetch<Uint8Array>(url + ".exe", {
-        method: "GET",
-        responseType: http.ResponseType.Binary,
+        method: "GET"
       })
     )
   );
-
+  console.log("开始存储", app.name)
   await fs.writeBinaryFile(app.exePath, response_exe.data);
+  console.log("下载完成", app.name);
 }
 
 export default {

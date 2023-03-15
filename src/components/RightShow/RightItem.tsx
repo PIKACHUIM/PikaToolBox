@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 function SoftItem(props: { soft: Soft }) {
   const soft = props.soft;
+  const [installed, setInstalled] = useState<boolean>(soft.installed);
   const [image64, setImage64] = useState<string>("");
   useEffect(() => {
     fs.readBinaryFile(soft.iconPath).then((data) => {
@@ -21,9 +22,7 @@ function SoftItem(props: { soft: Soft }) {
       // setImage64("data:image/png;base64,"+ window.btoa(binary));
       // [ ]: recommend createObjectURL method
       setImage64(
-        URL.createObjectURL(
-          new Blob([data.buffer], { type: "	image/png" })
-        )
+        URL.createObjectURL(new Blob([data.buffer], { type: "	image/png" }))
       );
     });
   }, [soft.iconPath]);
@@ -48,8 +47,9 @@ function SoftItem(props: { soft: Soft }) {
       <CardActions sx={{ justifyContent: "space-evenly" }}>
         <Button
           size="small"
+          disabled={!soft.installed}
           onClick={() => {
-            invoke("execute_file", { file_path: props.soft.exePath, args: [] });
+            invoke("execute_file", { filePath: props.soft.exePath, args: [] });
           }}
         >
           启动
@@ -60,7 +60,9 @@ function SoftItem(props: { soft: Soft }) {
           <Button
             size="small"
             onClick={() => {
-              getApp(props.soft);
+              getApp(props.soft).then(() => {
+                setInstalled(true);
+              });
             }}
           >
             下载
