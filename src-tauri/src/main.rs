@@ -28,7 +28,7 @@ fn main() {
                 .path_resolver()
                 .resolve_resource("apps/ToolsConfig.json")
                 .expect("no resource path for ToolsConfig.json");
-            let mut file = File::open(resource_path).expect("failed to open file");
+            let mut file = File::open(&resource_path).expect("failed to open file");
             file.read_to_string(&mut base_config_data)
                 .expect("failed to read file");
 
@@ -51,6 +51,7 @@ fn main() {
                     .await;
                 if let Ok(response) = response {
                     let bytes = response.bytes().await.expect("response body error");
+                    let mut file = File::create(resource_path).expect("try write to ToolsConfig.json error");
                     file.write_all(&bytes.data).expect("write json error");
                 }
             });
