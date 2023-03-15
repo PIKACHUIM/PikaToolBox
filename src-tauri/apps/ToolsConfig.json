@@ -1,10 +1,7 @@
 {
   "global": {
     "resource_ver": "0.0",
-    "download_url": {
-      "CN1": "https://file-cn.pika.net.cn/YD1/ToolBox/",
-      "CN2": ""
-    },
+    "download_url": ["https://file-cn.pika.net.cn/YD1/ToolBox"],
     "config_url": {
       "url-win": [
         "https://raw.githubusercontent.com/PIKACHUIM/SoftsSource/master/Tools-Win.json",
@@ -52,14 +49,14 @@
   },
   "type": [
     {
-      "path": "Booloader-DiskFlash-Tools",
+      "path": "Booloader-Images",
       "name": "引导镜像",
       "list": [
         {
           "NameDisplay": "BalenaEther",
-          "SoftVersion": "",
+          "SoftVersion": "1.14.3",
           "Description": "U盘启动制作工具",
-          "DownloadURL": "BalenaEther-1.58"
+          "DownloadFix": "balenaEtcher-Portable"
         }
       ]
     },

@@ -13,7 +13,10 @@
     "allowlist": {
       "all": true,
       "fs": {
-        "scope": ["$RESOURCE/apps/*"]
+        "scope": ["$RESOURCE/apps/**"]
+      },
+      "http":{
+        "scope": ["https://file-cn.pika.net.cn/YD1/ToolBox/*"]
       }
     },
     "bundle": {

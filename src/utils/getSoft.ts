@@ -1,11 +1,11 @@
-import { fs, path, http, invoke } from "@tauri-apps/api";
+import { fs, path, http } from "@tauri-apps/api";
 
 export interface Soft {
   typeIndex: number;
   name: string; // not include .exe
   description: string;
-
-  downloadUrl: string;
+  version: string;
+  downloadUrl: string[];
   exePath: string;
   iconPath: string;
   installed: boolean;
@@ -13,37 +13,68 @@ export interface Soft {
 
 async function getSoftsByType(typeIndex: number): Promise<Soft[]> {
   // 从配置文件中获取某类软件，返回确定的软件列表
-  let dirName: string;
+  let resourcePath: string = "";
   let type_detail: any;
+  let global_download_url: string[];
   try {
-    let resourcePath = await path.resolveResource("apps");
+    resourcePath = await path.resolveResource("apps");
     let configPath = await path.resolveResource("apps/ToolsConfig.json");
-    console.log("configPath", resourcePath);
     let data = await fs.readTextFile(configPath);
-    type_detail = JSON.parse(data).type[typeIndex];
-    dirName = `${resourcePath}/${type_detail.path}`;
+    let all_data = JSON.parse(data);
+    global_download_url = all_data.global.download_url;
+    type_detail = all_data.type[typeIndex];
+
+    let apps: Soft[] = type_detail.list.map((file: any) => ({
+      typeIndex: typeIndex,
+      name: file.NameDisplay,
+      description: file.Description,
+      version: file.SoftVersion,
+      downloadUrl: global_download_url.map(
+        (prefix) =>
+          `${prefix}/${type_detail.path}/${file.DownloadFix}-${file.SoftVersion}`
+      ),
+      exePath: "",
+      iconPath: "",
+      installed: false,
+    }));
+    for (let i in apps) {
+      apps[i].exePath = await path.join(
+        resourcePath,
+        "installed",
+        type_detail.path,
+        `${apps[i].name}-${apps[i].version}.exe`
+      );
+      apps[i].iconPath = await path.join(
+        resourcePath,
+        "icons",
+        type_detail.path,
+        `${apps[i].name}-${apps[i].version}.ico`
+      );
+    }
+    await Promise.all(
+      apps.map(async (app) => {
+        for (let each_path of [app.exePath, app.iconPath]) {
+          let dirname = await path.dirname(each_path);
+          if (!(await fs.exists(dirname))) {
+            fs.createDir(dirname, { recursive: true });
+          }
+        }
+        const response_icon = await Promise.race(
+          app.downloadUrl.map((url) =>
+            http.fetch<Uint8Array>(url + ".ico", {
+              method: "GET",
+              responseType: http.ResponseType.Binary,
+            })
+          )
+        );
+        await fs.writeBinaryFile(app.iconPath, response_icon.data);
+      })
+    );
+    return apps;
   } catch (e) {
     console.log("无法获取目标类型的软件列表", e);
+    return [];
   }
-  let apps: Soft[] = type_detail.list.map((file: any) => ({
-    typeIndex: typeIndex,
-    name: file.NameDisplay,
-    description: file.Description,
-    downloadUrl: file.DownloadURL,
-    exePath: `${dirName}/installed/${file.NameDisplay}-${file.SoftVersion}.exe`,
-    iconPath: `${dirName}/icons/${file.NameToFiles}-${file.SoftVersion}.ico`,
-    installed: false,
-  }));
-  await Promise.all(
-    apps.map(async (app) => {
-      const response_icon = await http.fetch<Uint8Array>(app.iconPath, {
-        method: "GET",
-        responseType: http.ResponseType.Binary,
-      });
-      await fs.writeBinaryFile(app.iconPath, response_icon.data);
-    })
-  );
-  return apps;
 }
 
 export async function fetchConfig() {
@@ -60,10 +91,14 @@ export async function fetchConfig() {
 }
 
 export async function getApp(app: Soft) {
-  const response_exe = await http.fetch<Uint8Array>(app.downloadUrl, {
-    method: "GET",
-    responseType: http.ResponseType.Binary,
-  });
+  const response_exe = await Promise.race(
+    app.downloadUrl.map((url) =>
+      http.fetch<Uint8Array>(url + ".exe", {
+        method: "GET",
+        responseType: http.ResponseType.Binary,
+      })
+    )
+  );
 
   await fs.writeBinaryFile(app.exePath, response_exe.data);
 }

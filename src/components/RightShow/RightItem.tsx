@@ -5,10 +5,28 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { getApp, Soft } from "../../utils/getSoft";
-import { invoke } from "@tauri-apps/api";
+import { fs, invoke } from "@tauri-apps/api";
+import { useEffect, useState } from "react";
 
 function SoftItem(props: { soft: Soft }) {
   const soft = props.soft;
+  const [image64, setImage64] = useState<string>("");
+  useEffect(() => {
+    fs.readBinaryFile(soft.iconPath).then((data) => {
+      // [x]: deprecated base64 method
+      // let binary = "";
+      // for (let i = 0; i < data.length; i++) {
+      //   binary += String.fromCharCode(data[i]);
+      // }
+      // setImage64("data:image/png;base64,"+ window.btoa(binary));
+      // [ ]: recommend createObjectURL method
+      setImage64(
+        URL.createObjectURL(
+          new Blob([data.buffer], { type: "	image/png" })
+        )
+      );
+    });
+  }, [soft.iconPath]);
   return (
     <Card sx={{ maxWidth: 200 }}>
       <CardMedia
@@ -17,7 +35,7 @@ function SoftItem(props: { soft: Soft }) {
         alt={soft.name}
         height="96"
         width="96"
-        image={soft.iconPath}
+        src={image64}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -28,13 +46,23 @@ function SoftItem(props: { soft: Soft }) {
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-evenly" }}>
-        <Button size="small" onClick={()=> {
-          invoke("execute_file", { file_path: props.soft.exePath, args: [] });
-        }}>启动</Button>
+        <Button
+          size="small"
+          onClick={() => {
+            invoke("execute_file", { file_path: props.soft.exePath, args: [] });
+          }}
+        >
+          启动
+        </Button>
         {soft.installed ? (
           <Button size="small">卸载</Button>
         ) : (
-          <Button size="small" onClick={()=> {getApp(props.soft)}}>
+          <Button
+            size="small"
+            onClick={() => {
+              getApp(props.soft);
+            }}
+          >
             下载
           </Button>
         )}

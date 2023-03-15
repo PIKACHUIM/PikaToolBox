@@ -21,7 +21,6 @@ function LeftControl(props: {}) {
     (async () => {
       let configPath = await path.resolveResource("apps/ToolsConfig.json");
       let data = await fs.readTextFile(configPath);
-      console.log(configPath);
       if (data) {
         setTitleList( JSON.parse(data).type.map((item: any) => item.name));
       } else {
