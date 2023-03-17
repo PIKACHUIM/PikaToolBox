@@ -91,29 +91,6 @@ export async function fetchConfig() {
   }
   return;
 }
-// TODO: 下载软件
-export async function getApp(app: Soft) {
-  console.log("开始下载", app.name);
-
-  await Promise.race(
-    app.downloadUrl.map((url) =>
-      fetch(url + ".exe", { redirect: "follow" })
-        .then((res) => {
-          return res.arrayBuffer();
-        })
-        .then((buffer) => {
-          console.log("开始存储", app.name, buffer.byteLength);
-          // const temp =Array.from(
-          //   buffer instanceof ArrayBuffer
-          //     ? new Uint8Array(buffer)
-          //     : buffer
-          // )
-          fs.writeBinaryFile(app.exePath, buffer);
-        })
-    )
-  );
-  console.log("下载完成", app.name);
-}
 
 export default {
   getSoftsByType,
